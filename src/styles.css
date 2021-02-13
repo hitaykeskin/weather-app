@@ -1,0 +1,52 @@
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: lightyellow;
+}
+h1 {
+  margin-top: 100px;
+  text-transform: uppercase;
+  line-height: 100px;
+}
+
+form {
+  width: 200px;
+  position: relative;
+  bottom: 170px;
+  left: 260px;
+}
+.current-location {
+  background-color: pink;
+  color: white;
+  font-size: 15px;
+  border-radius: 4px;
+}
+.btn {
+  border-style: solid;
+  border-radius: 2px;
+  border-color: pink;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.weather-temperature .active {
+  color: black;
+  text-decoration: none;
+}
+
+.weather-temperature .active:hover {
+  cursor: default;
+  text-decoration: none;
+}
+
+#thumbnail {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background-color: lightpink;
+  background: linear-gradient(35deg, #ccffff, #ffcccc);
+  width: 500px;
+  border-radius: 15px;
+  margin-bottom: 340px;
+  padding-left: 10px;
+}
