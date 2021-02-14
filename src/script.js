@@ -63,13 +63,21 @@ function retrieveTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].main);
 }
-//4) API için searchCity fonksiyonunu oluşturduk. retrieveTemperature fonks oluşturacağız.
+//response by API
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  console.log(response.data.list[0]);
+}
+
+//4) API call için searchCity fonksiyonunu oluşturduk. retrieveTemperature fonks ve retrieveForeccast oluşturacağız.
 function searchCity(city) {
   let apiKey = "8db434350a59b780ed9dec3c5447cf53";
-  let endPoint = "https://api.openweathermap.org/data/2.5/weather?q=";
   let units = "metric";
-  let apiUrl = `${endPoint}${city}&appid=${apiKey}&units=${units}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(retrieveTemperature);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -118,7 +126,7 @@ function displayFahrenheitTemperature(event) {
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   celsiusUnit.classList.remove("active");
   fahrenheitUnit.classList.add("active");
-  let temperatureElement = document.querySelector("#degree");
+  let temperatureElement = document.querySelector(".degree");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
@@ -126,7 +134,7 @@ function displayCelsiusTemperature(event) {
   event.preventDefault();
   celsiusUnit.classList.add("active");
   fahrenheitUnit.classList.remove("active");
-  let temperatureElement = document.querySelector("#degree");
+  let temperatureElement = document.querySelector(".degree");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
@@ -135,3 +143,6 @@ fahrenheitUnit.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusUnit = document.querySelector("#celsius-unit");
 celsiusUnit.addEventListener("click", displayCelsiusTemperature);
+
+searchCity("Istanbul");
+///////////////////////////////////////////////////////////////////////////////////////
