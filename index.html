@@ -48,32 +48,35 @@
         </p>
         <div>
           <form>
-            <label for="city">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Please enter your city"
-                required
-                id="city"
-                name="city-name"
-              />
-            </label>
-            <button class="btn" title="Search">🔎</button>
+            <div class="row">
+              <div class="col-9">
+                <label for="city">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Please enter your city"
+                    required
+                    id="city"
+                    name="city-name"
+                  />
+                </label>
+              </div>
+              <div class="col-3">
+                <button class="btn" title="Search">🔎</button>
+              </div>
+            </div>
           </form>
         </div>
-        <div class="row">
-          <div class="col"><strong>12:00</strong></div>
-        </div>
-        <div class="row">
-          <div class="col">11°/13°</div>
-        </div>
-
         <div class="row weather-forcast" id="forecast">
           <div class="col">
+            <h3>12:00</h3>
             <img
               src="https://ssl.gstatic.com/onebox/weather/48/snow_light.png"
               alt=""
             />
+            <div class="weather-forecast-temperature">
+              <strong>12°C</strong>11°C
+            </div>
           </div>
         </div>
         <div>

@@ -39,6 +39,13 @@ form {
   text-decoration: none;
 }
 
+#fahrenheit-unit {
+  text-decoration: none;
+}
+#celsius-unit {
+  text-decoration: none;
+}
+
 #thumbnail {
   display: block;
   margin: 0 auto;

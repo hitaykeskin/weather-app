@@ -66,8 +66,18 @@ function retrieveTemperature(response) {
 //response by API
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-  console.log(response.data.list[0]);
-}
+  let forecast = response.data.list[0];
+  forecastElement.innerHTML = `<div class="row weather-forcast" id="forecast">
+          <div class="col">
+            <h3>12:00</h3>
+            <img
+              src=""http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png""
+            />
+            <div class="weather-forecast-temperature">
+              <strong>${Math.round(forecast.main.temp_max)}°</strong>${Math.round(forecast.main.temp_min)}
+            </div>
+          </div>
+					</div>`
 
 //4) API call için searchCity fonksiyonunu oluşturduk. retrieveTemperature fonks ve retrieveForeccast oluşturacağız.
 function searchCity(city) {
