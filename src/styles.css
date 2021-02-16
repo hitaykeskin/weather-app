@@ -14,6 +14,10 @@ form {
   bottom: 170px;
   left: 260px;
 }
+
+footer {
+  text-align: center;
+}
 .current-location {
   background-color: pink;
   color: white;

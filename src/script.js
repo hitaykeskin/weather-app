@@ -23,6 +23,21 @@ let currentTime = `${currentDay} ${currentHour}:${currentMinute}`;
 let currentDate = document.querySelector(".current-date");
 currentDate.innerHTML = `${currentTime}`;
 
+function formatHours(timestrap) {
+  let now = new Date(timestrap);
+  let currentHour = now.getHours();
+  let currentMinute = now.getMinutes;
+  if (currentHour < 10) {
+    currentHour = `0${currentHour}`;
+  }
+  if (currentMinute < 10) {
+    currentMinute = `0${currentMinute}`;
+  }
+  let currentTime = `${currentHour}:${currentMinute}`;
+  let currentDate = document.querySelector(".twelve");
+  return (currentDate.innerHTML = currentTime);
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////
 //3)Call back function'ı yazıyoruz. event bir object'tir.event.preventDefault formun submit e-
 //dilmesini önler.Formun submit edilmesini engelliyoruz. h1 'i ve input bilgisini seçiyoruz.
@@ -67,18 +82,23 @@ function retrieveTemperature(response) {
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.list[0];
+  console.log(forecast.dt);
   forecastElement.innerHTML = `<div class="row weather-forcast" id="forecast">
           <div class="col">
-            <h3>12:00</h3>
+            <h5>${formatHours(forecast.dt)}</h5>
             <img
-              src=""http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png""
+              src="http://openweathermap.org/img/wn/${
+                forecast.weather[0].icon
+              }@2x.png"
             />
             <div class="weather-forecast-temperature">
-              <strong>${Math.round(forecast.main.temp_max)}°</strong>${Math.round(forecast.main.temp_min)}
+              <strong>${Math.round(
+                forecast.main.temp_max
+              )}°</strong>${Math.round(forecast.main.temp_min)}
             </div>
           </div>
-					</div>`
-
+					</div>`;
+}
 //4) API call için searchCity fonksiyonunu oluşturduk. retrieveTemperature fonks ve retrieveForeccast oluşturacağız.
 function searchCity(city) {
   let apiKey = "8db434350a59b780ed9dec3c5447cf53";
