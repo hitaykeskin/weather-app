@@ -94,7 +94,7 @@ function displayForecast(response) {
             <div class="weather-forecast-temperature">
               <strong>${Math.round(
                 forecast.main.temp_max
-              )}°</strong>${Math.round(forecast.main.temp_min)}
+              )}° / </strong>${Math.round(forecast.main.temp_min)}°
             </div>
           </div>
 					</div>`;
@@ -114,7 +114,7 @@ function searchCity(city) {
 
 //9)response
 function locationTemperature(response) {
-  let temp = document.querySelector("#degree");
+  let temp = document.querySelector(".degree");
   let descr = document.querySelector(".description");
   let hum = document.querySelector(".humidity");
   let wind = document.querySelector(".wind");
