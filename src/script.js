@@ -26,7 +26,7 @@ currentDate.innerHTML = `${currentTime}`;
 function formatHours(timestrap) {
   let now = new Date(timestrap);
   let currentHour = now.getHours();
-  let currentMinute = now.getMinutes;
+  let currentMinute = now.getMinutes();
   if (currentHour < 10) {
     currentHour = `0${currentHour}`;
   }
