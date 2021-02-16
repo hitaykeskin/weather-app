@@ -33,9 +33,7 @@ function formatHours(timestrap) {
   if (currentMinute < 10) {
     currentMinute = `0${currentMinute}`;
   }
-  let currentTime = `${currentHour}:${currentMinute}`;
-  let currentDate = document.querySelector(".twelve");
-  return (currentDate.innerHTML = currentTime);
+  return `${currentHour}:${currentMinute}`;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -81,11 +79,13 @@ function retrieveTemperature(response) {
 //response by API
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-  let forecast = response.data.list[0];
-  console.log(forecast.dt);
-  forecastElement.innerHTML = `<div class="row weather-forcast" id="forecast">
-          <div class="col">
-            <h5>${formatHours(forecast.dt)}</h5>
+  let forecast = null;
+
+  for (let index = 0; index < 6; index++) {
+    let forecast = response.data.list[index];
+    forecastElement.innerHTML += `<div class="row weather-forcast" id="forecast">
+          <div class="col-2">
+            <h5>${formatHours(forecast.dt * 1000)}</h5>
             <img
               src="http://openweathermap.org/img/wn/${
                 forecast.weather[0].icon
@@ -98,6 +98,7 @@ function displayForecast(response) {
             </div>
           </div>
 					</div>`;
+  }
 }
 //4) API call için searchCity fonksiyonunu oluşturduk. retrieveTemperature fonks ve retrieveForeccast oluşturacağız.
 function searchCity(city) {
