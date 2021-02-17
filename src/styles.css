@@ -42,7 +42,11 @@ footer {
 .btn:hover {
   cursor: pointer;
 }
-
+.description,
+.temp-humidity,
+.wind-speed {
+  font-size: 25px;
+}
 .current-date {
   position: relative;
   bottom: 23px;
