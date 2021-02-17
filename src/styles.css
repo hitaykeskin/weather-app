@@ -3,14 +3,14 @@ body {
   background-color: #fffaed;
 }
 h1 {
+  font-size: 55px;
   margin-top: 100px;
-  padding-top: 40px;
+  padding-top: 80px;
   text-transform: uppercase;
   line-height: 100px;
   position: relative;
   bottom: 30px;
 }
-
 input {
   width: 1200px;
   position: relative;
@@ -42,17 +42,13 @@ footer {
 .btn:hover {
   cursor: pointer;
 }
-.description,
-.temp-humidity,
-.wind-speed {
-  font-size: 25px;
-}
 .current-date {
   position: relative;
   bottom: 23px;
 }
 .degree,
 .units {
+  font-size: 50px;
   position: relative;
   bottom: 30px;
 }
@@ -62,6 +58,13 @@ footer {
 .weather-temperature .active {
   color: black;
   text-decoration: none;
+}
+.description,
+.temp-humidity,
+.wind-speed {
+  font-size: 20px;
+  position: relative;
+  bottom: 30px;
 }
 
 .weather-temperature .active:hover {
