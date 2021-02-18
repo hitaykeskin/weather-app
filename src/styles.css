@@ -11,6 +11,7 @@ h1 {
   position: relative;
   bottom: 30px;
 }
+
 input {
   width: 1200px;
   position: relative;
@@ -20,7 +21,7 @@ input {
 
 footer {
   text-align: center;
-  margin: 25px;
+  margin: 65px;
 }
 .current-location {
   background-color: pink;
@@ -29,7 +30,7 @@ footer {
   border-radius: 4px;
   position: relative;
   left: 600px;
-  top: 12px;
+  top: 5px;
 }
 .btn {
   border-style: solid;
