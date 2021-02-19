@@ -30,7 +30,8 @@ footer {
   border-radius: 4px;
   position: relative;
   left: 600px;
-  top: 5px;
+  top: 9px;
+  padding: 5px;
 }
 .btn {
   border-style: solid;
