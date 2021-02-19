@@ -116,7 +116,6 @@ function locationTemperature(response) {
   descr.innerHTML = description;
   wind.innerHTML = windSpeed;
   hum.innerHTML = humidity;
-  displayForecast(response);
 }
 
 function getCurrentLocation(position) {
@@ -127,6 +126,8 @@ function getCurrentLocation(position) {
   let units = "metric";
   let apiUrl = `${endPoint}lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(locationTemperature);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function getLocation() {
