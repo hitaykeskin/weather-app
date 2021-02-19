@@ -108,7 +108,7 @@ function locationTemperature(response) {
   let wind = document.querySelector(".wind");
 
   let temperature = Math.round(response.data.main.temp);
-  let description = Math.round(response.data.weather[0].main);
+  let description = response.data.weather[0].main;
   let windSpeed = Math.round(response.data.wind.speed);
   let humidity = response.data.main.humidity;
 
