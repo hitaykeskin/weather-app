@@ -67,7 +67,7 @@ function retrieveTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].main);
 }
-//response by API
+
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
@@ -116,6 +116,7 @@ function locationTemperature(response) {
   descr.innerHTML = description;
   wind.innerHTML = windSpeed;
   hum.innerHTML = humidity;
+  displayForecast(response);
 }
 
 function getCurrentLocation(position) {
