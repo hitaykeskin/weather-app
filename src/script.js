@@ -102,20 +102,24 @@ function searchCity(city) {
 }
 
 function locationTemperature(response) {
+  console.log(response);
   let temp = document.querySelector(".degree");
   let descr = document.querySelector(".description");
   let hum = document.querySelector(".humidity");
   let wind = document.querySelector(".wind");
+  let h1 = document.querySelector("h1");
 
   let temperature = Math.round(response.data.main.temp);
   let description = response.data.weather[0].main;
   let windSpeed = Math.round(response.data.wind.speed);
   let humidity = response.data.main.humidity;
+  let cityName = response.data.name;
 
   temp.innerHTML = temperature;
   descr.innerHTML = description;
   wind.innerHTML = windSpeed;
   hum.innerHTML = humidity;
+  h1.innerHTML = cityName;
 }
 
 function getCurrentLocation(position) {
