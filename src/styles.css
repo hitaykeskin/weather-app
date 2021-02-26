@@ -14,8 +14,6 @@ h1 {
 
 input {
   width: 1200px;
-  position: relative;
-  bottom: 170px;
   left: 360px;
 }
 
@@ -28,31 +26,25 @@ footer {
   color: white;
   font-size: 15px;
   border-radius: 4px;
-  position: relative;
-  left: 600px;
-  top: 9px;
   padding: 5px;
+  position: relative;
+  left: 40px;
 }
 .btn {
   border-style: solid;
   border-radius: 2px;
   border-color: pink;
   position: relative;
-  right: 24px;
-  bottom: 170px;
+  bottom: 38px;
+  left: 170px;
 }
 .btn:hover {
   cursor: pointer;
 }
-.current-date {
-  position: relative;
-  bottom: 23px;
-}
+
 .degree,
 .units {
   font-size: 50px;
-  position: relative;
-  bottom: 30px;
 }
 .weather-forecast-temperature {
   font-size: 20px;
@@ -65,8 +57,6 @@ footer {
 .temp-humidity,
 .wind-speed {
   font-size: 20px;
-  position: relative;
-  bottom: 30px;
 }
 
 .weather-temperature .active:hover {

@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SheCodes Weather App⛅🌞⛅⛅🌞</title>
+    <title>SheCodes Weather App👩🏻‍💻💖</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -29,19 +30,11 @@
           </div>
         </h2>
         <div class="row">
-          <div class="col-md-4">
-            <button class="current-location">Current Location📍</button>
+          <div class="col-6">
             <h3 class="current-date">Today</h3>
           </div>
-        </div>
-        <img
-          src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-          alt="weather-icon"
-          id="icon"
-        />
-        <form>
-          <div class="row">
-            <div class="col-9">
+          <div class="col-3">
+            <form>
               <label for="city">
                 <input
                   type="text"
@@ -51,13 +44,19 @@
                   id="city"
                   name="city-name"
                 />
+                <button class="btn" title="Search">🔎</button>
               </label>
-            </div>
-            <div class="col-3">
-              <button class="btn" title="Search">🔎</button>
-            </div>
+            </form>
           </div>
-        </form>
+          <div class="col-3">
+            <button class="current-location">Current Location📍</button>
+          </div>
+        </div>
+        <img
+          src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+          alt="weather-icon"
+          id="icon"
+        />
         <p class="description">Clouds</p>
         <p class="temp-humidity">
           <span> Humidity:</span>
@@ -69,27 +68,24 @@
           <span class="wind">2</span>
           <span>km/h</span>
         </p>
-        <div></div>
-        <div class="row weather-forcast" id="forecast">
-          <div class="col-2">
+        <div class="row">
+          <div class="col-2" id="forecast">
             <h5 class="twelve">12:00</h5>
             <img
               src="https://ssl.gstatic.com/onebox/weather/48/snow_light.png"
               alt=""
             />
-            <div class="weather-forecast-temperature">
-              <strong>12°C</strong>11°C
-            </div>
+          </div>
+          <div class="weather-forecast-temperature">
+            <strong>12°C</strong>11°C
           </div>
         </div>
-        <div>
-          <footer>
-            <a href="https://github.com/hitaykeskin/shecodes-weather-app"
-              >Open source code by</a
-            >
-            hitayco♡
-          </footer>
-        </div>
+        <footer>
+          <a href="https://github.com/hitaykeskin/shecodes-weather-app"
+            >Open source code by</a
+          >
+          hitayco♡
+        </footer>
       </div>
     </div>
     <script src="src/script.js"></script>
